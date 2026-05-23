@@ -1,0 +1,21 @@
+
+> royaldiadem@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.1.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+
+ ✓ Starting...
+ ✓ Ready in 1336ms
+ ○ Compiling / ...
+
+warn - The class `duration-[0.35s]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `duration-&lsqb;0.35s&rsqb;` to silence this warning.
+
+warn - The class `ease-[cubic-bezier(0.22,1,0.36,1)]` is ambiguous and matches multiple utilities.
+warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.22,1,0.36,1)&rsqb;` to silence this warning.
+ ✓ Compiled / in 6.5s
+ GET / 200 in 7300ms
+ GET / 200 in 94ms
+ GET / 200 in 75ms
