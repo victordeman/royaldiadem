@@ -2,20 +2,95 @@
 > royaldiadem@0.1.0 dev
 > next dev --turbopack
 
-   ▲ Next.js 15.1.0 (Turbopack)
-   - Local:        http://localhost:3000
-   - Network:      http://192.168.0.2:3000
+ ⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+   ▲ Next.js 15.5.18 (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.2:3001
 
  ✓ Starting...
- ✓ Ready in 1336ms
+ ✓ Ready in 1526ms
  ○ Compiling / ...
+ ✓ Compiled / in 7.4s
+ ⨯ ./src/app/globals.css:2:2
+Module not found: Can't resolve 'shadcn/tailwind.css'
+[0m [90m 1 |[39m [33m@[39m[36mimport[39m [32m"tw-animate-css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [33m@[39m[36mimport[39m [32m"shadcn/tailwind.css"[39m[33m;[39m
+ [90m   |[39m  [31m[1m^[22m[39m
+ [90m 3 |[39m [33m*[39m[33m,[39m [33m:[39m[33m:[39mbefore[33m,[39m [33m:[39m[33m:[39mafter{
+ [90m 4 |[39m   [33m--[39mtw[33m-[39mborder[33m-[39mspacing[33m-[39mx[33m:[39m [35m0[39m[33m;[39m
+ [90m 5 |[39m   [33m--[39mtw[33m-[39mborder[33m-[39mspacing[33m-[39my[33m:[39m [35m0[39m[33m;[39m[0m
 
-warn - The class `duration-[0.35s]` is ambiguous and matches multiple utilities.
-warn - If this is content and not a class, replace it with `duration-&lsqb;0.35s&rsqb;` to silence this warning.
 
-warn - The class `ease-[cubic-bezier(0.22,1,0.36,1)]` is ambiguous and matches multiple utilities.
-warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.22,1,0.36,1)&rsqb;` to silence this warning.
- ✓ Compiled / in 6.5s
- GET / 200 in 7300ms
- GET / 200 in 94ms
- GET / 200 in 75ms
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/globals.css:1:2
+Module not found: Can't resolve 'tw-animate-css'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33m@[39m[36mimport[39m [32m"tw-animate-css"[39m[33m;[39m
+ [90m   |[39m  [31m[1m^[22m[39m
+ [90m 2 |[39m [33m@[39m[36mimport[39m [32m"shadcn/tailwind.css"[39m[33m;[39m
+ [90m 3 |[39m [33m*[39m[33m,[39m [33m:[39m[33m:[39mbefore[33m,[39m [33m:[39m[33m:[39mafter{
+ [90m 4 |[39m   [33m--[39mtw[33m-[39mborder[33m-[39mspacing[33m-[39mx[33m:[39m [35m0[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 3.3s
+ GET / 500 in 11187ms
+ ⨯ ./src/app/globals.css:2:2
+Module not found: Can't resolve 'shadcn/tailwind.css'
+[0m [90m 1 |[39m [33m@[39m[36mimport[39m [32m"tw-animate-css"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 2 |[39m [33m@[39m[36mimport[39m [32m"shadcn/tailwind.css"[39m[33m;[39m
+ [90m   |[39m  [31m[1m^[22m[39m
+ [90m 3 |[39m [33m*[39m[33m,[39m [33m:[39m[33m:[39mbefore[33m,[39m [33m:[39m[33m:[39mafter{
+ [90m 4 |[39m   [33m--[39mtw[33m-[39mborder[33m-[39mspacing[33m-[39mx[33m:[39m [35m0[39m[33m;[39m
+ [90m 5 |[39m   [33m--[39mtw[33m-[39mborder[33m-[39mspacing[33m-[39my[33m:[39m [35m0[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./src/app/globals.css:1:2
+Module not found: Can't resolve 'tw-animate-css'
+[0m[31m[1m>[22m[39m[90m 1 |[39m [33m@[39m[36mimport[39m [32m"tw-animate-css"[39m[33m;[39m
+ [90m   |[39m  [31m[1m^[22m[39m
+ [90m 2 |[39m [33m@[39m[36mimport[39m [32m"shadcn/tailwind.css"[39m[33m;[39m
+ [90m 3 |[39m [33m*[39m[33m,[39m [33m:[39m[33m:[39mbefore[33m,[39m [33m:[39m[33m:[39mafter{
+ [90m 4 |[39m   [33m--[39mtw[33m-[39mborder[33m-[39mspacing[33m-[39mx[33m:[39m [35m0[39m[33m;[39m[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET / 500 in 106ms
+ ✓ Compiled in 240ms
+ ✓ Compiled / in 18ms
+ GET / 200 in 1841ms
