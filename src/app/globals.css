@@ -72,6 +72,19 @@
     @apply bg-black/40 backdrop-blur-xl border border-white/5 shadow-2xl;
   }
 
+  .glass-premium {
+    @apply bg-black/40 backdrop-blur-2xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,0.05), transparent);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 119, 0.15);
+  }
+
+  .glow-gold-strong {
+    box-shadow: 0 0 35px rgba(212, 175, 119, 0.3);
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-white/60;
   }
