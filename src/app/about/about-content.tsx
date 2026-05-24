@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { HeroSection } from "@/components/sections/hero-section";
 import { Section } from "@/components/sections/section-wrapper";
 import { SectionHeader } from "@/components/sections/section-header";
@@ -29,24 +30,6 @@ export default function AboutContent() {
       title: "Global Compliance",
       description: "As Altek representatives, we adhere to international regulatory standards across all sectors.",
       icon: <ShieldCheck className="h-6 w-6 text-gold" />,
-    },
-  ];
-
-  const team = [
-    {
-      name: "Dr. Julian Thorne",
-      role: "Director of Research",
-      bio: "Former lead at Altek Materials Science with 20+ years in precision engineering.",
-    },
-    {
-      name: "Elena Vance",
-      role: "Head of Laboratory Operations",
-      bio: "Specialist in ISO-certified laboratory workflows and quality assurance systems.",
-    },
-    {
-      name: "Marcus Aurelius",
-      role: "Chief Technical Consultant",
-      bio: "Expert in multi-axis CNC optimization and advanced manufacturing techniques.",
     },
   ];
 
@@ -175,27 +158,38 @@ export default function AboutContent() {
       <Section className="bg-white/5">
         <SectionHeader
           title="Leadership Team"
-          subtitle="Expertise driven by decades of industrial experience."
+          subtitle="Dedicated to excellence in environmental science and toxicology."
           align="center"
         />
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {team.map((member, index) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-premium p-8 rounded-2xl border border-white/10 hover:border-gold/20 transition-all text-center"
-            >
-              <div className="w-24 h-24 rounded-full bg-gold/10 mx-auto mb-6 flex items-center justify-center">
-                <Users className="h-10 w-10 text-gold/50" />
-              </div>
-              <h4 className="text-xl font-bold text-white mb-1">{member.name}</h4>
-              <p className="text-gold text-sm font-bold uppercase tracking-widest mb-4">{member.role}</p>
-              <p className="text-white/60 text-sm leading-relaxed">{member.bio}</p>
-            </motion.div>
-          ))}
+        <div className="max-w-4xl mx-auto mt-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-premium p-8 md:p-12 rounded-3xl border border-white/10 text-center"
+          >
+            <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8 rounded-2xl overflow-hidden border-2 border-gold/20">
+              <Image
+                src="/images/ceo.png"
+                alt="Dr. Onyagbodor Oghogho Peter"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <h4 className="text-3xl md:text-4xl font-bold text-white mb-2">Dr. Onyagbodor Oghogho Peter, PhD</h4>
+            <p className="text-gold text-sm md:text-base font-bold uppercase tracking-widest mb-8">
+              President/CEO, Royal Diadem Research Laboratory
+            </p>
+            <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto text-balance">
+              Dr. Onyagbodor Oghogho Peter is the Founder and President/CEO of Royal Diadem Research Laboratory.
+              A distinguished environmental biologist and toxicologist, he leads the platform&apos;s mission to provide
+              high-quality research tools, scientific data resources, and collaborative opportunities in
+              environmental sciences, toxicology, sustainability, and biological research. His academic
+              expertise and leadership drive the development of innovative solutions for complex
+              environmental challenges, particularly in oil-impacted regions.
+            </p>
+          </motion.div>
         </div>
       </Section>
     </main>
