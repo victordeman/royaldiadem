@@ -29,27 +29,27 @@
   }
 
   .dark {
-    --background: 222.2 47.4% 5.2%;
+    --background: 222 47% 2%;
     --foreground: 210 40% 98%;
-    --card: 222.2 47.4% 5.2%;
+    --card: 222 47% 4%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 47.4% 5.2%;
+    --popover: 222 47% 4%;
     --popover-foreground: 210 40% 98%;
     --primary: 210 73% 25%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 217.2 32.6% 12%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
+    --muted: 217.2 32.6% 12%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 226 71% 50%;
+    --accent: 226 71% 55%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 210 73% 25%;
-    --gold: 36 52% 65%;
-    --gold-foreground: 222.2 47.4% 5.2%;
+    --border: 217.2 32.6% 15%;
+    --input: 217.2 32.6% 15%;
+    --ring: 226 71% 55%;
+    --gold: 43 70% 60%;
+    --gold-foreground: 222 47% 2%;
   }
 }
 
@@ -58,6 +58,43 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground selection:bg-accent/30 selection:text-accent-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white/90 to-white/60;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-[#D4AF37] via-[#F9E2AF] to-[#C5A028];
+  }
+
+  .bg-mesh {
+    background-color: hsla(222, 47%, 2%, 1);
+    background-image:
+      radial-gradient(at 0% 0%, hsla(226, 71%, 15%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(210, 73%, 10%, 1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(226, 71%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(210, 73%, 8%, 1) 0px, transparent 50%);
+  }
+
+  .animate-slow-pan {
+    animation: slow-pan 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes slow-pan {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
   }
 }
