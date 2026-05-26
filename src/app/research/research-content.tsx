@@ -87,9 +87,9 @@ export default function ResearchContent() {
       <Section className="bg-white/5">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <Badge className="bg-gold/20 text-gold border-gold/30">Strategic Partnership</Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Representative of <span className="text-gold">Altek, Inc.</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Representative of <span className="text-gold">ORTEC/AMETEK, Inc.</span></h2>
           <p className="text-xl text-white/70 leading-relaxed">
-            As the official technical representative for Altek, we provide frontline research
+            As the official technical representative for ORTEC/AMETEK, we provide frontline research
             and development support, ensuring that their industry-leading manufacturing
             capabilities are accessible and optimized for our global partners.
           </p>

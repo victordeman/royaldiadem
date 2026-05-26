@@ -8,7 +8,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">RoyalDiadem Research & Laboratory</h3>
             <p className="text-sm text-muted-foreground">
-              Authorized agent and representative of Altek, Inc.
+              Authorized agent and representative of ORTEC/AMETEK, Inc.
             </p>
           </div>
           <div>

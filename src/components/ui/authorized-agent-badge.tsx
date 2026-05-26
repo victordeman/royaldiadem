@@ -23,7 +23,7 @@ export function AuthorizedAgentBadge({ className }: AuthorizedAgentBadgeProps) {
         <div className="w-2 h-2 rounded-full bg-gold relative" />
       </div>
       <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold/90">
-        Official Authorized Agent & Representative of <span className="text-white">Altek, Inc.</span>
+        Official Authorized Agent & Representative of <span className="text-white">ORTEC/AMETEK, Inc.</span>
       </span>
     </motion.div>
   );

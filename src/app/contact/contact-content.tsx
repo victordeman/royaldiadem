@@ -55,7 +55,7 @@ export default function ContactContent() {
                   <span className="font-bold uppercase tracking-widest text-sm">Global Representative</span>
                </div>
                <p className="text-white/60">
-                  Official authorized agent for Altek, Inc. supporting operations in North America, Europe, and Asia.
+                  Official authorized agent for ORTEC/AMETEK, Inc. supporting operations in North America, Europe, and Asia.
                </p>
             </div>
           </motion.div>
