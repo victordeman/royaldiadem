@@ -21,12 +21,14 @@ interface ProductCardProps {
 export function ProductCard({ model, description, image, specs, link }: ProductCardProps) {
   return (
     <Card className="h-full flex flex-col overflow-hidden glass-premium border-white/10 group transition-all duration-300 hover:border-gold/30">
-      <div className="relative aspect-square w-full bg-white/5 overflow-hidden">
+      <div className="relative aspect-[3/2] w-full bg-white/5 overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 bg-[#0A2540] animate-pulse" />
         <Image
           src={image}
           alt={model}
           fill
-          className="object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <CardContent className="flex-1 flex flex-col p-6 space-y-4">
