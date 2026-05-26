@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     // For now, return a sophisticated placeholder response that simulates the agent
     return NextResponse.json({
       role: 'assistant',
-      content: `I am the RoyalDiadem Technical Assistant. I've analyzed your inquiry regarding "${message}". Currently, I am accessing our precision engineering knowledgebase (Phase 5) to provide a detailed technical response. How can I assist you further with our CNC or Injection Molding capabilities?`,
+      content: `I am the RoyalDiadem Technical Assistant. I've analyzed your inquiry regarding "${message}". Currently, I am accessing our laboratory and research equipment knowledgebase (Phase 5) to provide a detailed technical response. How can I assist you further with our HPGe detectors or spectroscopy solutions?`,
     });
   } catch (error) {
     console.error('RAG Error:', error);
