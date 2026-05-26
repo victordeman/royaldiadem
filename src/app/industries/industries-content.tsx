@@ -1,91 +1,120 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { HeroSection } from "@/components/sections/hero-section";
 import { Section } from "@/components/sections/section-wrapper";
 import { SectionHeader } from "@/components/sections/section-header";
-import { IndustryCard } from "@/components/ui/industry-card";
-import { ShieldCheck, Microscope, Cpu, Plane, Activity, Radio, Factory, Landmark } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ShieldCheck, Activity, Factory, Landmark, Binary, Waves, Zap } from "lucide-react";
+import { ProductCard } from "@/components/ui/product-card";
 
 export default function IndustriesContent() {
-  const industries = [
+  const industrialApps = [
+    "Environmental Monitoring",
+    "Nuclear Plant Effluents",
+    "Radiopharmaceutical Isotopic Quality and Purity",
+    "Naturally Occurring Radioactive Materials (NORM/TENORM)",
+    "Personnel Internal Contamination Monitoring",
+    "Food Contamination Monitoring",
+    "Radioactive Waste Non-Destructive Assay"
+  ];
+
+  const solutionCategories = [
     {
-      title: "Aerospace",
-      description: "Flight-critical components with absolute reliability, adhering to AS9100D standards and ITAR regulations.",
-      icon: <Plane className="h-10 w-10" />,
-      stats: "Zero-Failure Rate"
+      title: "Gamma Spectroscopy",
+      description: "Identification and quantification of radionuclides by analyzing gamma-ray energy spectra.",
+      icon: <Waves className="w-5 h-5" />
     },
     {
-      title: "Medical Devices",
-      description: "ISO 13485 compliant manufacturing for surgical instruments, implants, and high-precision diagnostic equipment.",
-      icon: <Microscope className="h-10 w-10" />,
-      stats: "Class 10k Cleanroom"
+      title: "Alpha Spectroscopy",
+      description: "Systems used to identify and quantify radionuclides based on emitted alpha particles.",
+      icon: <Binary className="w-5 h-5" />
     },
     {
-      title: "Defense",
-      description: "Strategic manufacturing solutions for tactical systems, communications, and specialized ordnance components.",
-      icon: <ShieldCheck className="h-10 w-10" />,
-      stats: "Security Cleared"
+      title: "Alpha/Beta Counting",
+      description: "Full suite of manual and automatic counters with gas-flow proportional or dual-phosphor technology.",
+      icon: <Zap className="w-5 h-5" />
     },
     {
-      title: "High-End Electronics",
-      description: "Complex enclosures, heat sinks, and chassis for next-generation telecommunications and server infrastructure.",
-      icon: <Cpu className="h-10 w-10" />,
-      stats: "Sub-Micron Precision"
+      title: "Waste Assay Systems",
+      description: "Mobile systems for radioactive waste assay utilizing high-resolution gamma spectrometers.",
+      icon: <Factory className="w-5 h-5" />
     },
     {
-      title: "Automotive (EV)",
-      description: "Lightweighting solutions and battery thermal management components for the electric vehicle revolution.",
-      icon: <Activity className="h-10 w-10" />,
-      stats: "Rapid Scalability"
+      title: "Health Physics",
+      description: "Direct personnel measurement systems for quick screening of gamma emitting materials.",
+      icon: <ShieldCheck className="w-5 h-5" />
     },
     {
-      title: "Industrial Automation",
-      description: "Robust components for robotic systems and automated assembly lines in the smart factories of tomorrow.",
-      icon: <Factory className="h-10 w-10" />,
-      stats: "24/7 Operations"
-    },
+      title: "Food Monitoring",
+      description: "Rapid screening of solids and liquids for radioactive isotope contamination.",
+      icon: <Activity className="w-5 h-5" />
+    }
   ];
 
   return (
     <main className="min-h-screen bg-mesh">
       <HeroSection
-        title="Precision Solutions for Every Frontier"
+        title="Industrial Applications"
         subtitle="Across every industry, we deliver the engineering excellence that drives global innovation."
       />
 
       <Section>
         <SectionHeader
-          title="Sector-Specific Expertise"
-          subtitle="Tailored manufacturing and research processes designed to meet the unique challenges of your industry."
-          align="center"
+          title="Industry-Specific Solutions"
+          subtitle="ORTEC offers an extensive lineup of radiation measurement instruments for diverse industrial sectors."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {industries.map((ind, index) => (
-            <motion.div
-              key={ind.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-premium p-10 rounded-[2rem] border border-white/10 hover:border-gold/30 transition-all group"
-            >
-              <div className="mb-8 p-4 rounded-2xl bg-gold/10 w-fit group-hover:bg-gold/20 transition-colors text-gold">
-                {ind.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{ind.title}</h3>
-              <p className="text-white/60 leading-relaxed mb-8">
-                {ind.description}
+        <div className="grid lg:grid-cols-2 gap-12 mt-12 items-start">
+          <div className="space-y-8">
+            <div className="prose prose-invert max-w-none">
+              <p className="text-xl text-white/70 leading-relaxed">
+                We provide full suite product solutions for counting labs, radioactive waste management,
+                nuclear power plants, and food packaging. Our expertise extends to oil, gas, and mining
+                operations, ensuring safety and compliance across the industrial spectrum.
               </p>
-              <div className="flex items-center gap-2 pt-4 border-t border-white/5">
-                 <Badge variant="outline" className="border-gold/30 text-gold uppercase text-[10px] tracking-[0.2em]">
-                    {ind.stats}
-                 </Badge>
-              </div>
-            </motion.div>
-          ))}
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-gold font-bold uppercase tracking-wider flex items-center gap-2">
+                <Factory className="w-5 h-5" /> Key Applications
+              </h4>
+              <ul className="grid grid-cols-1 gap-3">
+                {industrialApps.map(app => (
+                  <li key={app} className="flex items-center gap-3 text-white/60">
+                    <div className="h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
+                    {app}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {solutionCategories.map(cat => (
+                <div key={cat.title} className="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-gold/20 transition-all group">
+                  <div className="mb-3 p-2 rounded-lg bg-gold/10 w-fit text-gold group-hover:bg-gold/20 transition-colors">
+                    {cat.icon}
+                  </div>
+                  <h5 className="text-white font-bold mb-1 text-sm">{cat.title}</h5>
+                  <p className="text-white/50 text-[10px] leading-relaxed">{cat.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6">
+            <ProductCard
+              model="DSPEC-50 MCA"
+              description="Advanced Digital Multi-Channel Analyzer designed for high-performance gamma spectroscopy with exceptional throughput and stability."
+              image="https://placehold.co/600x400/0A2540/D4AF77?text=DSPEC-50+MCA"
+              link="https://www.ortec-online.com/products/electronic-instruments/multi-channel-analyzers/workstation/dspec-50"
+              specs={[
+                { parameter: "Type", specification: "Digital Multi-Channel Analyzer" },
+                { parameter: "Maximum Throughput", specification: ">100,000 cps" },
+                { parameter: "Gain Stability", specification: "<50 ppm/°C" },
+                { parameter: "Communication", specification: "USB 2.0 and Ethernet" },
+                { parameter: "High Voltage Supply", specification: "Internal HV" }
+              ]}
+            />
+          </div>
         </div>
       </Section>
 
@@ -98,10 +127,10 @@ export default function IndustriesContent() {
                <p className="text-lg text-white/70 leading-relaxed">
                   We maintain rigorous adherence to international standards across all served sectors.
                   Our quality management systems are continuously audited to ensure we meet the
-                  evolving needs of Aerospace, Medical, and Defense industries.
+                  evolving needs of Industrial, Medical, and Environmental sectors.
                </p>
                <div className="grid grid-cols-2 gap-6">
-                  {['AS9100D', 'ISO 13485', 'ISO 9001:2015', 'ITAR Registered'].map(cert => (
+                  {['ISO 9001:2015', 'ISO 11929', 'ANSI N42.42', 'Certified Lab Operations'].map(cert => (
                     <div key={cert} className="flex items-center gap-3">
                        <div className="h-2 w-2 rounded-full bg-gold" />
                        <span className="text-white font-medium uppercase tracking-widest text-xs">{cert}</span>
