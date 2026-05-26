@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     default: "RoyalDiadem Research & Laboratory | Precision Engineering & Strategic R&D",
     template: "%s | RoyalDiadem Research & Laboratory"
   },
-  description: "Official representative of Altek, Inc. specializing in precision CNC machining, injection molding, and advanced laboratory research for Aerospace, Medical, and Defense.",
-  keywords: ["Precision Machining", "Injection Molding", "Contract Assembly", "Aerospace Manufacturing", "Medical Device Manufacturing", "Laboratory Research", "Altek Representative"],
+  description: "Official representative of ORTEC/AMETEK, Inc. specializing in precision CNC machining, injection molding, and advanced laboratory research for Aerospace, Medical, and Defense.",
+  keywords: ["Precision Machining", "Injection Molding", "Contract Assembly", "Aerospace Manufacturing", "Medical Device Manufacturing", "Laboratory Research", "ORTEC/AMETEK Representative"],
   authors: [{ name: "RoyalDiadem Research & Laboratory" }],
   creator: "RoyalDiadem",
   openGraph: {

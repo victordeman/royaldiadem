@@ -28,7 +28,7 @@ export default function AboutContent() {
     },
     {
       title: "Global Compliance",
-      description: "As Altek representatives, we adhere to international regulatory standards across all sectors.",
+      description: "As ORTEC/AMETEK representatives, we adhere to international regulatory standards across all sectors.",
       icon: <ShieldCheck className="h-6 w-6 text-gold" />,
     },
   ];
@@ -58,7 +58,7 @@ export default function AboutContent() {
               <p>
                 Founded on the principles of precision and innovation, RoyalDiadem Research & Laboratory
                 emerged as a specialized hub for technical excellence. As the authorized agent and
-                representative of Altek, Inc., we bridge the gap between theoretical research and
+                representative of ORTEC/AMETEK, Inc., we bridge the gap between theoretical research and
                 industrial application.
               </p>
               <p>

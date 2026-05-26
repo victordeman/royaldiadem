@@ -7,7 +7,7 @@ export function OrganizationSchema() {
     "name": "RoyalDiadem Research & Laboratory",
     "url": "https://royaldiademresearchlaboratory-8ml7ui2yc.vercel.app",
     "logo": "https://royaldiademresearchlaboratory-8ml7ui2yc.vercel.app/favicon.ico",
-    "description": "Authorized agent of Altek, Inc. specializing in precision CNC machining, injection molding, and industrial research.",
+    "description": "Authorized agent of ORTEC/AMETEK, Inc. specializing in precision CNC machining, injection molding, and industrial research.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1200 Innovation Drive",

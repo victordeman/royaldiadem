@@ -1,9 +1,9 @@
 # RoyalDiadem Research & Laboratory
 
-Official website for the authorized agent and representative of Altek, Inc.
+Official website for the authorized agent and representative of ORTEC/AMETEK, Inc.
 
 ## Project Goal
-To provide a professional platform for RoyalDiadem Research & Laboratory, showcasing their services and partnership with Altek, Inc., featuring a high-performance, modern web experience with integrated AI capabilities (Phase 5).
+To provide a professional platform for RoyalDiadem Research & Laboratory, showcasing their services and partnership with ORTEC/AMETEK, Inc., featuring a high-performance, modern web experience with integrated AI capabilities (Phase 5).
 
 ## Tech Stack
 - **Framework:** Next.js 15 (App Router)

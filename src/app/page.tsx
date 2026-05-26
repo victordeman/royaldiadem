@@ -38,7 +38,7 @@ export default function Home() {
     <main className="min-h-screen bg-mesh">
       <HeroSection 
         title="Elevating the Standards of Global Manufacturing"
-        subtitle="RoyalDiadem delivers precision engineering and strategic manufacturing solutions as the authorized representative of Altek, Inc."
+        subtitle="RoyalDiadem delivers precision engineering and strategic manufacturing solutions as the authorized representative of ORTEC/AMETEK, Inc."
         primaryCtaText="Get a Quote"
         primaryCtaHref="/quote"
         secondaryCtaText="Explore Capabilities"
