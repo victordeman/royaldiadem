@@ -7,24 +7,24 @@ import { AuthorizedAgentBadge } from "@/components/ui/authorized-agent-badge";
 import { Cpu, Microscope, Settings, ShieldCheck, Zap, Factory } from "lucide-react";
 
 export default function Home() {
-  const capabilities = [
+  const products = [
     {
-      title: "Precision CNC Machining",
-      description: "Advanced multi-axis milling and turning for the most demanding aerospace and medical specifications.",
+      title: "Radiation Detectors",
+      description: "Advanced High-Purity Germanium (HPGe) detectors for precise spectroscopic analysis.",
       icon: <Settings className="h-8 w-8" />,
-      href: "/capabilities/cnc-machining"
+      href: "/products"
     },
     {
-      title: "Injection Molding",
-      description: "High-volume production with precision tolerances and a wide range of engineering-grade materials.",
+      title: "MCA Electronics",
+      description: "Digital signal processing systems providing high-resolution spectroscopy performance.",
       icon: <Zap className="h-8 w-8" />,
-      href: "/capabilities/injection-molding"
+      href: "/products"
     },
     {
-      title: "Contract Assembly",
-      description: "Turnkey manufacturing solutions including electromechanical assembly and full system integration.",
+      title: "Analytical Software",
+      description: "Comprehensive software suites for gamma spectroscopy and qualitative/quantitative analysis.",
       icon: <Factory className="h-8 w-8" />,
-      href: "/capabilities/assembly"
+      href: "/products"
     }
   ];
 
@@ -41,8 +41,8 @@ export default function Home() {
         subtitle="RoyalDiadem delivers precision engineering and strategic manufacturing solutions as the authorized representative of Altek, Inc."
         primaryCtaText="Get a Quote"
         primaryCtaHref="/quote"
-        secondaryCtaText="Explore Capabilities"
-        secondaryCtaHref="/capabilities"
+        secondaryCtaText="Explore Products"
+        secondaryCtaHref="/products"
       />
 
       <SectionWrapper className="bg-transparent">
@@ -51,14 +51,14 @@ export default function Home() {
         </div>
         
         <SectionHeader 
-          title="Our Manufacturing Capabilities"
-          subtitle="World-class precision engineering tailored for your most critical projects."
+          title="Our Product Solutions"
+          subtitle="World-class research and laboratory equipment tailored for your most critical projects."
           align="center"
         />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {capabilities.map((cap) => (
-            <CapabilityCard key={cap.title} {...cap} />
+          {products.map((product) => (
+            <CapabilityCard key={product.title} {...product} />
           ))}
         </div>
       </SectionWrapper>
