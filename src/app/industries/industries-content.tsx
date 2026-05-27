@@ -104,7 +104,7 @@ export default function IndustriesContent() {
             <ProductCard
               model="DSPEC-50 MCA"
               description="Advanced Digital Multi-Channel Analyzer designed for high-performance gamma spectroscopy with exceptional throughput and stability."
-              image="https://placehold.co/600x400/1e3a8a/ffffff?text=DSPEC-50+MCA"
+              image="https://www.ortec-online.com/-/media/ametekortec/images/d/dsp50.png"
               link="https://www.ortec-online.com/products/electronic-instruments/multi-channel-analyzers/workstation/dspec-50"
               specs={[
                 { parameter: "Type", specification: "Digital Multi-Channel Analyzer" },

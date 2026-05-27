@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
+import { CachedImage } from "@/components/CachedImage";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,13 +24,21 @@ export function ProductCard({ model, description, image, specs, link }: ProductC
     <Card className="h-full flex flex-col overflow-hidden glass-premium border-white/10 group transition-all duration-300 hover:border-gold/30">
       <div className="relative aspect-[3/2] w-full bg-white/5 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[#0A2540] animate-pulse" />
-        <Image
-          src={image}
-          alt={model}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        {image.startsWith('http') ? (
+          <CachedImage
+            src={image}
+            alt={model}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <Image
+            src={image}
+            alt={model}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        )}
       </div>
       <CardContent className="flex-1 flex flex-col p-6 space-y-4">
         <h3 className="text-xl font-bold text-white tracking-tight">{model}</h3>
