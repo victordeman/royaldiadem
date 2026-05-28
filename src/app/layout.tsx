@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
+import { ChatWidget } from "@/components/ai/chat-widget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,6 +77,7 @@ export default function RootLayout({
           <footer className="mt-auto">
             <Footer />
           </footer>
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>
