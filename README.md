@@ -12,7 +12,9 @@ To provide a professional platform for RoyalDiadem Research & Laboratory, showca
 - **UI Components:** shadcn/ui
 - **Icons:** Lucide React
 - **Theme:** next-themes (Dark/Light mode)
-- **Database/Vector Store:** Supabase (pgvector) - *Planned for Phase 5*
+- **Database/Vector Store:** Supabase (pgvector)
+- **AI SDK:** Vercel AI SDK
+- **Models:** OpenAI (GPT-4o-mini & text-embedding-3-small)
 - **Deployment:** Vercel
 
 ## Getting Started
@@ -50,7 +52,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 2. **Phase 2: UI/UX Design & Brand Identity**
 3. **Phase 3: Core Pages & Content**
 4. **Phase 4: Backend Integration & Services**
-5. **Phase 5: RAG Agent & AI Integration**
+5. **Phase 5: RAG Agent & AI Integration** (Complete)
    - Implementing Supabase pgvector for vector storage.
    - RAG agent for platform-wide assistance.
 6. **Phase 6: Testing & Optimization**
@@ -60,7 +62,25 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 See `.env.example` for the required environment variables. Key ones include:
 - `NEXT_PUBLIC_SUPABASE_URL`: Your Supabase project URL.
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key.
+- `SUPABASE_SERVICE_ROLE_KEY`: Your Supabase service role key (for ingestion).
 - `DATABASE_URL`: Connection string for PostgreSQL (Supabase).
+- `OPENAI_API_KEY`: Your OpenAI API key for embeddings and chat.
+- `HUGGINGFACE_API_KEY`: (Optional) Your Hugging Face API key.
+
+## AI Assistant & RAG Pipeline
+The platform includes a built-in RAG (Retrieval-Augmented Generation) AI Assistant.
+
+### How it works:
+1. **Data Ingestion:** Content from the website is converted into vector embeddings using OpenAI's `text-embedding-3-small` and stored in Supabase `pgvector`.
+2. **Retrieval:** When a user asks a question, the assistant searches the vector database for relevant context.
+3. **Generation:** The retrieved context is passed to an LLM (default: `gpt-4o-mini`) via the Vercel AI SDK to generate a technically accurate response.
+
+### Ingesting Data:
+To populate the vector database with company content, run:
+```bash
+npx tsx src/scripts/ingest.ts
+```
+*(Ensure `SUPABASE_SERVICE_ROLE_KEY` and `OPENAI_API_KEY` are set in your environment).*
 
 ## Deployment
 This project is configured for easy deployment on Vercel. Simply connect your GitHub repository to Vercel, and it will automatically handle the build and deployment process.
