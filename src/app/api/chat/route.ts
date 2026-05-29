@@ -1,4 +1,4 @@
-import { openai } from "@ai-sdk/openai";
+import { createOpenAI } from "@ai-sdk/openai";
 import { streamText } from "ai";
 import { generateEmbedding } from "@/lib/ai/embedding";
 import { searchSimilarDocuments } from "@/lib/ai/vector-store";
@@ -20,9 +20,14 @@ export async function POST(req: Request) {
   const context = await searchSimilarDocuments(embedding);
   const contextText = context.map(doc => doc.content).join("\n\n---\n\n");
 
-  // 4. Create the stream using OpenAI
+  // 4. Create the stream using Qwen via Hugging Face OpenAI-compatible API
+  const hf = createOpenAI({
+    baseURL: "https://router.huggingface.co/v1",
+    apiKey: process.env.HF_API_TOKEN,
+  });
+
   const result = await streamText({
-    model: openai("gpt-4o-mini"),
+    model: hf.chat("Qwen/Qwen2.5-72B-Instruct"),
     messages,
     system: `You are the Royal Diadem Technical Assistant.
     You are professional, scientific, and helpful.
