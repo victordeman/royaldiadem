@@ -16,7 +16,7 @@ export default function InsightsPage() {
   const insights = getAllInsights();
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection
         title="Technical Insights"
         subtitle="Exploring the frontiers of manufacturing science and industrial innovation."
@@ -40,14 +40,14 @@ export default function InsightsPage() {
                   </div>
                 </div>
                 <CardContent className="p-8 space-y-4">
-                  <div className="flex items-center gap-4 text-xs text-white/40 font-bold uppercase tracking-widest">
+                  <div className="flex items-center gap-4 text-xs text-slate-900 dark:text-white/40 font-bold uppercase tracking-widest">
                     <span className="flex items-center gap-1"><Calendar className="h-3 w-3" /> {post.date}</span>
                     <span className="flex items-center gap-1"><User className="h-3 w-3" /> {post.author}</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-white group-hover:text-gold transition-colors line-clamp-2">
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-gold transition-colors line-clamp-2">
                     {post.title}
                   </h2>
-                  <p className="text-white/60 line-clamp-3 leading-relaxed">
+                  <p className="text-slate-900 dark:text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
                     {post.excerpt}
                   </p>
                   <div className="pt-4 flex items-center gap-2 text-gold font-bold text-sm uppercase tracking-widest">

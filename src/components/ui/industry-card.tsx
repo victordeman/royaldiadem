@@ -19,20 +19,20 @@ export function IndustryCard({ title, icon, className }: IndustryCardProps) {
     >
       <Card className={cn(
         "overflow-hidden group cursor-pointer transition-all duration-500",
-        "bg-white/5 backdrop-blur-md border-white/10 hover:border-gold/30 hover:bg-white/10",
+        "bg-white/5 backdrop-blur-md border-white/10 hover:border-primary/30 hover:bg-white/10",
         "shadow-xl hover:shadow-gold/5",
         className
       )}>
         <CardContent className="p-8 flex flex-col items-center text-center gap-6">
           {icon && (
             <div className="relative">
-              <div className="absolute inset-0 bg-gold/20 blur-xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
-              <div className="relative text-gold group-hover:text-white transition-colors duration-300">
+              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative text-primary group-hover:text-white transition-colors duration-300">
                 {icon}
               </div>
             </div>
           )}
-          <h3 className="text-lg font-bold uppercase tracking-widest text-white/80 group-hover:text-gold transition-colors duration-300">
+          <h3 className="text-lg font-bold uppercase tracking-widest text-white/80 group-hover:text-primary transition-colors duration-300">
             {title}
           </h3>
         </CardContent>

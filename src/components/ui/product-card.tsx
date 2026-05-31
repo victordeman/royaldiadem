@@ -21,7 +21,7 @@ interface ProductCardProps {
 
 export function ProductCard({ model, description, image, specs, link }: ProductCardProps) {
   return (
-    <Card className="h-full flex flex-col overflow-hidden glass-premium border-white/10 group transition-all duration-300 hover:border-gold/30">
+    <Card className="h-full flex flex-col overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl border-white/10 group transition-all duration-300 hover:border-primary/30">
       <div className="relative aspect-[3/2] w-full bg-white/5 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[#0A2540] animate-pulse" />
         {image.startsWith('http') ? (
@@ -52,8 +52,8 @@ export function ProductCard({ model, description, image, specs, link }: ProductC
               <table className="w-full text-left text-xs">
                 <thead>
                   <tr className="bg-white/10 border-b border-white/5">
-                    <th className="px-3 py-2 font-semibold text-gold uppercase tracking-wider">Parameter</th>
-                    <th className="px-3 py-2 font-semibold text-gold uppercase tracking-wider">Specification</th>
+                    <th className="px-3 py-2 font-semibold text-primary uppercase tracking-wider">Parameter</th>
+                    <th className="px-3 py-2 font-semibold text-primary uppercase tracking-wider">Specification</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
@@ -80,7 +80,7 @@ export function ProductCard({ model, description, image, specs, link }: ProductC
             <Button
               variant="ghost"
               size="sm"
-              className="w-full text-gold hover:text-gold hover:bg-gold/10 gap-2"
+              className="w-full text-primary hover:text-primary hover:bg-primary/10 gap-2"
               render={<Link href={link} target="_blank" rel="noopener noreferrer" />}
             >
               View on ORTEC <ExternalLink className="h-3 w-3" />

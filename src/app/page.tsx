@@ -35,7 +35,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection 
         title="Elevating the Standards of Global Manufacturing"
         subtitle="RoyalDiadem delivers precision engineering and strategic manufacturing solutions as the authorized representative of ORTEC/AMETEK, Inc."
@@ -45,7 +45,7 @@ export default function Home() {
         secondaryCtaHref="/products"
       />
 
-      <SectionWrapper className="bg-transparent">
+      <SectionWrapper className="bg-slate-50 dark:bg-slate-900/50">
         <div className="flex justify-center mb-16">
           <AuthorizedAgentBadge />
         </div>
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper className="bg-white/5 backdrop-blur-sm">
+      <SectionWrapper className="bg-white dark:bg-background">
         <SectionHeader 
           title="Industries We Serve"
           subtitle="Providing specialized solutions across mission-critical sectors."
