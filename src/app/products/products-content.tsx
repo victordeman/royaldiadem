@@ -150,7 +150,7 @@ export default function ProductsContent() {
   ];
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection
         title="World-Class Research Solutions"
         subtitle="Authorized agent and representative of Altek, Inc., providing industry-leading radiation detection and analysis equipment."
@@ -177,7 +177,7 @@ export default function ProductsContent() {
         </div>
       </Section>
 
-      <Section className="bg-white/5 backdrop-blur-sm">
+      <Section className="bg-slate-50 dark:bg-slate-900/50 backdrop-blur-sm">
         <SectionHeader
           title="Alternative Offer"
           subtitle="Flexible spectroscopic solutions featuring Pop-Top HPGe detector configurations and advanced cryocooling."

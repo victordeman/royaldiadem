@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
@@ -7,15 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
 import { ChatWidget } from "@/components/ai/chat-widget";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://royaldiademresearchlaboratory-8ml7ui2yc.vercel.app"),
@@ -61,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${inter.className} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider
           attribute="class"

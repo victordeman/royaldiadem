@@ -72,7 +72,7 @@ export default function ResearchContent() {
   ];
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection
         title="Scientific Rigor. Industrial Precision."
         subtitle="Bridging the gap between frontier research and manufacturing reality through dedicated laboratory excellence."
@@ -88,7 +88,7 @@ export default function ResearchContent() {
         <div className="grid lg:grid-cols-2 gap-12 mt-12 items-start">
           <div className="space-y-8">
             <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-white/70 leading-relaxed">
+              <p className="text-xl text-slate-900 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
                 ORTEC has been an industry leader in nuclear measurement detectors and instrumentation for over 60 years.
                 Whether it is cutting-edge research or educating the next generation of scientists and engineers,
                 we provide an extensive suite of products to meet the most demanding requirements.
@@ -101,7 +101,7 @@ export default function ResearchContent() {
               </h4>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {researchApps.map(app => (
-                  <li key={app} className="flex items-center gap-3 text-white/60">
+                  <li key={app} className="flex items-center gap-3 text-slate-900 dark:text-slate-600 dark:text-slate-400">
                     <div className="h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
                     {app}
                   </li>
@@ -111,12 +111,12 @@ export default function ResearchContent() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {researchCategories.map(cat => (
-                <div key={cat.title} className="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-gold/20 transition-all group">
+                <div key={cat.title} className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-white/5 hover:border-gold/20 transition-all group">
                   <div className="mb-3 p-2 rounded-lg bg-gold/10 w-fit text-gold group-hover:bg-gold/20 transition-colors">
                     {cat.icon}
                   </div>
-                  <h5 className="text-white font-bold mb-1">{cat.title}</h5>
-                  <p className="text-white/50 text-xs leading-relaxed">{cat.description}</p>
+                  <h5 className="text-slate-900 dark:text-white font-bold mb-1">{cat.title}</h5>
+                  <p className="text-slate-900 dark:text-white/50 text-xs leading-relaxed">{cat.description}</p>
                 </div>
               ))}
             </div>
@@ -155,7 +155,7 @@ export default function ResearchContent() {
       </Section>
 
       {/* Homeland Security Section */}
-      <Section className="bg-white/5">
+      <Section className="bg-slate-50 dark:bg-slate-900/50">
         <SectionHeader
           title="Homeland Security"
           subtitle="Advanced technologies for safeguarding nuclear materials and securing global borders."
@@ -184,7 +184,7 @@ export default function ResearchContent() {
 
           <div className="space-y-8 order-1 lg:order-2">
             <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-white/70 leading-relaxed">
+              <p className="text-xl text-slate-900 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
                 ORTEC plays a crucial role in supporting government agencies and industries around the globe in securing and safeguarding nuclear and radioactive materials.
                 Whether potential acts of terrorism, nuclear accidents, or materials control and accountancy, ORTEC has the technologies and solutions to meet the evolving challenges.
               </p>
@@ -196,7 +196,7 @@ export default function ResearchContent() {
               </h4>
               <ul className="grid grid-cols-1 gap-3">
                 {homelandApps.map(app => (
-                  <li key={app} className="flex items-center gap-3 text-white/60">
+                  <li key={app} className="flex items-center gap-3 text-slate-900 dark:text-slate-600 dark:text-slate-400">
                     <div className="h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
                     {app}
                   </li>
@@ -206,12 +206,12 @@ export default function ResearchContent() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {homelandCategories.map(cat => (
-                <div key={cat.title} className="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-gold/20 transition-all group">
+                <div key={cat.title} className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-white/5 hover:border-gold/20 transition-all group">
                   <div className="mb-3 p-2 rounded-lg bg-gold/10 w-fit text-gold group-hover:bg-gold/20 transition-colors">
                     {cat.icon}
                   </div>
-                  <h5 className="text-white font-bold mb-1">{cat.title}</h5>
-                  <p className="text-white/50 text-xs leading-relaxed">{cat.description}</p>
+                  <h5 className="text-slate-900 dark:text-white font-bold mb-1">{cat.title}</h5>
+                  <p className="text-slate-900 dark:text-white/50 text-xs leading-relaxed">{cat.description}</p>
                 </div>
               ))}
             </div>
@@ -222,42 +222,42 @@ export default function ResearchContent() {
       <Section>
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <Badge className="bg-gold/20 text-gold border-gold/30">Strategic Partnership</Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Representative of <span className="text-gold">ORTEC/AMETEK, Inc.</span></h2>
-          <p className="text-xl text-white/70 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Representative of <span className="text-gold">ORTEC/AMETEK, Inc.</span></h2>
+          <p className="text-xl text-slate-900 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
             As the official technical representative for ORTEC/AMETEK, we provide frontline research
             and development support, ensuring that their industry-leading manufacturing
             capabilities are accessible and optimized for our global partners.
           </p>
           <div className="flex flex-wrap justify-center gap-6 pt-4">
-             <div className="glass-premium px-8 py-4 rounded-2xl border border-white/10 flex items-center gap-3">
+             <div className="glass-premium px-8 py-4 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-3">
                 <ShieldCheck className="text-gold h-6 w-6" />
-                <span className="text-white/80 font-bold uppercase tracking-widest text-sm">Certified Lab Operations</span>
+                <span className="text-slate-900 dark:text-white/80 font-bold uppercase tracking-widest text-sm">Certified Lab Operations</span>
              </div>
-             <div className="glass-premium px-8 py-4 rounded-2xl border border-white/10 flex items-center gap-3">
+             <div className="glass-premium px-8 py-4 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-center gap-3">
                 <Cpu className="text-gold h-6 w-6" />
-                <span className="text-white/80 font-bold uppercase tracking-widest text-sm">Advanced Silicon Research</span>
+                <span className="text-slate-900 dark:text-white/80 font-bold uppercase tracking-widest text-sm">Advanced Silicon Research</span>
              </div>
           </div>
         </div>
       </Section>
 
       <Section>
-        <div className="glass-premium p-12 md:p-20 rounded-[3rem] border border-white/10 overflow-hidden relative">
+        <div className="glass-premium p-12 md:p-20 rounded-[3rem] border border-slate-200 dark:border-slate-800 overflow-hidden relative">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gold/5 blur-[100px] rounded-full" />
           <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-white leading-tight">Collaborate with our <br/> <span className="text-gold">Research Team</span></h2>
-              <p className="text-lg text-white/70 leading-relaxed">
+              <h2 className="text-4xl font-bold text-slate-900 dark:text-white leading-tight">Collaborate with our <br/> <span className="text-gold">Research Team</span></h2>
+              <p className="text-lg text-slate-900 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
                 We partner with academic institutions and private sector R&D departments
                 to solve the most complex engineering challenges of our time.
               </p>
-              <Button variant="gold" size="lg" className="p-0">
+              <Button variant="default" size="lg" className="p-0">
                 <Link href="/contact" className="w-full h-full px-8 flex items-center">Inquire about Partnership</Link>
               </Button>
             </div>
             <div className="grid grid-cols-2 gap-4">
                {[1, 2, 3, 4].map(i => (
-                 <div key={i} className="aspect-square rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
+                 <div key={i} className="aspect-square rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
                     <Beaker className="h-8 w-8 text-gold/20" />
                  </div>
                ))}

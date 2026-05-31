@@ -29,7 +29,7 @@ export default function QuoteContent() {
 
   if (isSuccess) {
     return (
-      <main className="min-h-screen bg-mesh flex items-center justify-center p-6">
+      <main className="min-h-screen bg-background flex items-center justify-center p-6">
          <motion.div
            initial={{ opacity: 0, scale: 0.9 }}
            animate={{ opacity: 1, scale: 1 }}
@@ -43,7 +43,7 @@ export default function QuoteContent() {
                Your technical specifications have been submitted to our engineering team.
                You will receive a preliminary assessment within 24-48 hours.
             </p>
-            <Button variant="gold" size="lg" onClick={() => window.location.href = "/"}>
+            <Button variant="default" size="lg" onClick={() => window.location.href = "/"}>
                Return Home
             </Button>
          </motion.div>
@@ -52,7 +52,7 @@ export default function QuoteContent() {
   }
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection
         title="Request a Technical Proposal"
         subtitle="Submit your project specifications for a comprehensive technical and commercial evaluation."
@@ -119,7 +119,7 @@ export default function QuoteContent() {
 
                   <Button
                     type="submit"
-                    variant="gold"
+                    variant="default"
                     size="lg"
                     className="w-full py-8 text-lg font-bold"
                     disabled={isSubmitting}

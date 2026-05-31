@@ -14,27 +14,27 @@ export default function AboutContent() {
     {
       title: "Uncompromising Precision",
       description: "We maintain the highest standards of accuracy in every micro-measurement and manufacturing process.",
-      icon: <Target className="h-6 w-6 text-gold" />,
+      icon: <Target className="h-6 w-6 text-primary" />,
     },
     {
       title: "Scientific Excellence",
       description: "Our research methodologies are grounded in rigorous academic standards and industry best practices.",
-      icon: <Award className="h-6 w-6 text-gold" />,
+      icon: <Award className="h-6 w-6 text-primary" />,
     },
     {
       title: "Collaborative Innovation",
       description: "We work as an extension of our clients' teams, fostering a culture of shared discovery and success.",
-      icon: <Users className="h-6 w-6 text-gold" />,
+      icon: <Users className="h-6 w-6 text-primary" />,
     },
     {
       title: "Global Compliance",
       description: "As ORTEC/AMETEK representatives, we adhere to international regulatory standards across all sectors.",
-      icon: <ShieldCheck className="h-6 w-6 text-gold" />,
+      icon: <ShieldCheck className="h-6 w-6 text-primary" />,
     },
   ];
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection
         title="Pioneering the Future of Precision"
         subtitle="RoyalDiadem Research & Laboratory is dedicated to advancing the boundaries of manufacturing through scientific rigor and strategic partnership."
@@ -48,13 +48,13 @@ export default function AboutContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Badge variant="outline" className="mb-4 border-gold/50 text-gold uppercase tracking-widest">
+            <Badge variant="outline" className="mb-4 border-primary/50 text-primary uppercase tracking-widest">
               Our Story
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              A Legacy of <span className="text-gold">Excellence</span> in Research
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8">
+              A Legacy of <span className="text-primary">Excellence</span> in Research
             </h2>
-            <div className="space-y-6 text-lg text-white/70 leading-relaxed">
+            <div className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
               <p>
                 Founded on the principles of precision and innovation, RoyalDiadem Research & Laboratory
                 emerged as a specialized hub for technical excellence. As the authorized agent and
@@ -76,32 +76,32 @@ export default function AboutContent() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden glass-premium border border-white/10 flex items-center justify-center p-12">
-               <Globe className="w-full h-full text-gold/5 animate-pulse" />
+            <div className="aspect-square rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center p-12 shadow-xl">
+               <Globe className="w-full h-full text-primary/5 animate-pulse" />
                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 border-2 border-gold/20 rounded-full animate-[spin_20s_linear_infinite]" />
-                  <div className="absolute w-1/2 h-1/2 border border-gold/40 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                  <div className="w-3/4 h-3/4 border-2 border-primary/10 rounded-full animate-[spin_20s_linear_infinite]" />
+                  <div className="absolute w-1/2 h-1/2 border border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
                </div>
                <div className="relative z-10 text-center">
-                  <div className="text-6xl font-bold text-gold mb-2">15+</div>
-                  <div className="text-white/50 uppercase tracking-widest text-sm">Years of Innovation</div>
+                  <div className="text-6xl font-bold text-primary mb-2">15+</div>
+                  <div className="text-slate-500 uppercase tracking-widest text-sm">Years of Innovation</div>
                </div>
             </div>
           </motion.div>
         </div>
       </Section>
 
-      <Section className="bg-white/5">
+      <Section className="bg-slate-50 dark:bg-slate-900/50">
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-premium p-12 rounded-3xl border border-white/10"
+            className="bg-white dark:bg-slate-900 p-12 rounded-xl border border-slate-200 dark:border-slate-800 shadow-lg"
           >
-            <Eye className="h-12 w-12 text-gold mb-6" />
-            <h3 className="text-3xl font-bold text-white mb-4">Our Vision</h3>
-            <p className="text-white/70 text-lg leading-relaxed">
+            <Eye className="h-12 w-12 text-primary mb-6" />
+            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Vision</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
               To be the world&apos;s most trusted partner for precision manufacturing research,
               defining the standards of quality and innovation for the next generation of
               industrial development.
@@ -113,11 +113,11 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="glass-premium p-12 rounded-3xl border border-white/10"
+            className="bg-white dark:bg-slate-900 p-12 rounded-xl border border-slate-200 dark:border-slate-800 shadow-lg"
           >
-            <Target className="h-12 w-12 text-gold mb-6" />
-            <h3 className="text-3xl font-bold text-white mb-4">Our Mission</h3>
-            <p className="text-white/70 text-lg leading-relaxed">
+            <Target className="h-12 w-12 text-primary mb-6" />
+            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Mission</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
               To deliver superior technical solutions and representative services that
               enable our clients to achieve unprecedented levels of manufacturing
               precision, reliability, and global market success.
@@ -141,13 +141,13 @@ export default function AboutContent() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full glass-premium border-white/5 hover:border-gold/30 transition-all duration-500 group">
+              <Card className="h-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:shadow-2xl transition-all duration-500 group">
                 <CardContent className="pt-8">
-                  <div className="mb-6 p-3 rounded-xl bg-white/5 w-fit group-hover:bg-gold/10 transition-colors">
+                  <div className="mb-6 p-3 rounded-xl bg-slate-50 dark:bg-slate-800 w-fit group-hover:bg-primary/10 transition-colors">
                     {value.icon}
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-4">{value.title}</h4>
-                  <p className="text-white/60 leading-relaxed">{value.description}</p>
+                  <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">{value.title}</h4>
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -155,7 +155,7 @@ export default function AboutContent() {
         </div>
       </Section>
 
-      <Section className="bg-white/5">
+      <Section className="bg-slate-50 dark:bg-slate-900/50">
         <SectionHeader
           title="Leadership Team"
           subtitle="Dedicated to excellence in environmental science and toxicology."
@@ -166,9 +166,9 @@ export default function AboutContent() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-premium p-8 md:p-12 rounded-3xl border border-white/10 text-center"
+            className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-xl border border-slate-200 dark:border-slate-800 text-center shadow-xl"
           >
-            <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8 rounded-2xl overflow-hidden border-2 border-gold/20">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8 rounded-2xl overflow-hidden border-8 border-white dark:border-slate-800 shadow-xl">
               <Image
                 src="/images/ceo.png"
                 alt="Dr. Onyagbodor Oghogho Peter"
@@ -177,11 +177,11 @@ export default function AboutContent() {
                 priority
               />
             </div>
-            <h4 className="text-3xl md:text-4xl font-bold text-white mb-2">Dr. Onyagbodor Oghogho Peter, PhD</h4>
-            <p className="text-gold text-sm md:text-base font-bold uppercase tracking-widest mb-8">
+            <h4 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-2">Dr. Onyagbodor Oghogho Peter, PhD</h4>
+            <p className="text-primary text-sm md:text-base font-bold uppercase tracking-widest mb-8">
               President/CEO, Royal Diadem Research Laboratory
             </p>
-            <p className="text-white/70 text-lg leading-relaxed max-w-3xl mx-auto text-balance">
+            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-3xl mx-auto text-balance">
               Dr. Onyagbodor Oghogho Peter is the Founder and President/CEO of Royal Diadem Research Laboratory.
               A distinguished environmental biologist and toxicologist, he leads the platform&apos;s mission to provide
               high-quality research tools, scientific data resources, and collaborative opportunities in

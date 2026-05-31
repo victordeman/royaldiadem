@@ -51,7 +51,7 @@ export default function IndustriesContent() {
   ];
 
   return (
-    <main className="min-h-screen bg-mesh">
+    <main className="min-h-screen bg-background">
       <HeroSection
         title="Industrial Applications"
         subtitle="Across every industry, we deliver the engineering excellence that drives global innovation."
@@ -66,7 +66,7 @@ export default function IndustriesContent() {
         <div className="grid lg:grid-cols-2 gap-12 mt-12 items-start">
           <div className="space-y-8">
             <div className="prose prose-invert max-w-none">
-              <p className="text-xl text-white/70 leading-relaxed">
+              <p className="text-xl text-slate-900 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
                 We provide full suite product solutions for counting labs, radioactive waste management,
                 nuclear power plants, and food packaging. Our expertise extends to oil, gas, and mining
                 operations, ensuring safety and compliance across the industrial spectrum.
@@ -79,7 +79,7 @@ export default function IndustriesContent() {
               </h4>
               <ul className="grid grid-cols-1 gap-3">
                 {industrialApps.map(app => (
-                  <li key={app} className="flex items-center gap-3 text-white/60">
+                  <li key={app} className="flex items-center gap-3 text-slate-900 dark:text-slate-600 dark:text-slate-400">
                     <div className="h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
                     {app}
                   </li>
@@ -89,12 +89,12 @@ export default function IndustriesContent() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {solutionCategories.map(cat => (
-                <div key={cat.title} className="p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-gold/20 transition-all group">
+                <div key={cat.title} className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-white/5 hover:border-gold/20 transition-all group">
                   <div className="mb-3 p-2 rounded-lg bg-gold/10 w-fit text-gold group-hover:bg-gold/20 transition-colors">
                     {cat.icon}
                   </div>
-                  <h5 className="text-white font-bold mb-1 text-sm">{cat.title}</h5>
-                  <p className="text-white/50 text-[10px] leading-relaxed">{cat.description}</p>
+                  <h5 className="text-slate-900 dark:text-white font-bold mb-1 text-sm">{cat.title}</h5>
+                  <p className="text-slate-900 dark:text-white/50 text-[10px] leading-relaxed">{cat.description}</p>
                 </div>
               ))}
             </div>
@@ -118,13 +118,13 @@ export default function IndustriesContent() {
         </div>
       </Section>
 
-      <Section className="bg-white/5 overflow-hidden">
+      <Section className="bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
          <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="flex-1 space-y-8">
-               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
                   Global Compliance & <br/> <span className="text-gold">Regulatory Standards</span>
                </h2>
-               <p className="text-lg text-white/70 leading-relaxed">
+               <p className="text-lg text-slate-900 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
                   We maintain rigorous adherence to international standards across all served sectors.
                   Our quality management systems are continuously audited to ensure we meet the
                   evolving needs of Industrial, Medical, and Environmental sectors.
@@ -133,16 +133,16 @@ export default function IndustriesContent() {
                   {['ISO 9001:2015', 'ISO 11929', 'ANSI N42.42', 'Certified Lab Operations'].map(cert => (
                     <div key={cert} className="flex items-center gap-3">
                        <div className="h-2 w-2 rounded-full bg-gold" />
-                       <span className="text-white font-medium uppercase tracking-widest text-xs">{cert}</span>
+                       <span className="text-slate-900 dark:text-white font-medium uppercase tracking-widest text-xs">{cert}</span>
                     </div>
                   ))}
                </div>
             </div>
             <div className="flex-1 relative">
                <div className="absolute -inset-10 bg-gold/5 blur-[120px] rounded-full animate-pulse" />
-               <div className="relative glass-premium p-12 rounded-[3rem] border border-white/10 flex flex-col items-center justify-center text-center">
+               <div className="relative glass-premium p-12 rounded-[3rem] border border-slate-200 dark:border-slate-800 flex flex-col items-center justify-center text-center">
                   <Landmark className="h-20 w-20 text-gold/20 mb-8" />
-                  <div className="text-5xl font-bold text-white mb-2">100%</div>
+                  <div className="text-5xl font-bold text-slate-900 dark:text-white mb-2">100%</div>
                   <p className="text-gold uppercase tracking-widest text-sm font-bold">Audit Compliance</p>
                </div>
             </div>

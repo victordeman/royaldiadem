@@ -14,7 +14,7 @@ export function TestimonialCard({ quote, author, role, company, className }: Tes
   return (
     <Card className={cn("h-full bg-background border-border/50", className)}>
       <CardContent className="pt-6">
-        <Quote className="h-8 w-8 text-gold/20 mb-4" />
+        <Quote className="h-8 w-8 text-primary/20 mb-4" />
         <p className="text-muted-foreground italic mb-6 leading-relaxed">
           &ldquo;{quote}&rdquo;
         </p>

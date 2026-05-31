@@ -27,12 +27,12 @@ export function SectionHeader({ title, subtitle, align = "center", className }: 
         "flex flex-col gap-4",
         align === "center" ? "items-center" : "items-start"
       )}>
-        <div className="w-12 h-1 bg-gold rounded-full" />
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
+        <p className="text-primary font-bold uppercase tracking-widest text-sm">Our Excellence</p>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight">
           {title}
         </h2>
         {subtitle && (
-          <p className="text-xl text-white/60 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
             {subtitle}
           </p>
         )}

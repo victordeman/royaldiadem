@@ -23,20 +23,20 @@ export function CapabilityCard({ title, description, icon, href, className }: Ca
     >
       <Card className={cn(
         "group h-full flex flex-col transition-all duration-500",
-        "bg-white/5 backdrop-blur-md border-white/10 hover:border-gold/50 hover:bg-white/10",
+        "bg-white/5 backdrop-blur-md border-white/10 hover:border-primary/50 hover:bg-white/10",
         "shadow-2xl hover:shadow-gold/10",
         className
       )}>
         <CardHeader>
           <div className="flex items-center justify-between mb-4">
             {icon && (
-              <div className="p-3 rounded-2xl bg-gold/10 text-gold group-hover:scale-110 transition-transform duration-500">
+              <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-500">
                 {icon}
               </div>
             )}
-            <div className="w-8 h-[1px] bg-gold/30 group-hover:w-12 transition-all duration-500" />
+            <div className="w-8 h-[1px] bg-primary/30 group-hover:w-12 transition-all duration-500" />
           </div>
-          <CardTitle className="text-2xl font-bold text-white group-hover:text-gold transition-colors duration-300">
+          <CardTitle className="text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300">
             {title}
           </CardTitle>
         </CardHeader>
@@ -48,7 +48,7 @@ export function CapabilityCard({ title, description, icon, href, className }: Ca
         <CardFooter>
           <Link 
             href={href} 
-            className="inline-flex items-center text-sm font-semibold text-gold tracking-wide uppercase group/link"
+            className="inline-flex items-center text-sm font-semibold text-primary tracking-wide uppercase group/link"
           >
             Explore Services 
             <motion.span
