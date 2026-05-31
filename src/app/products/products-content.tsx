@@ -11,7 +11,7 @@ export default function ProductsContent() {
     {
       model: "GEM-C30",
       description: "Extended range P-type HPGe detector in a streamline configuration, optimized for maximum absolute efficiency in various counting geometries.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/detector/detectors-types.png",
+      image: "/images/detectors-types.png",
       link: "https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/hpge-radiation-detector-types-how-choose/profile-gem-p-type-coaxial-and-semi-planar-hpge-radiation-detectors",
       specs: [
         { parameter: "Detector Type", specification: "P-type Coaxial HPGe" },
@@ -24,7 +24,7 @@ export default function ProductsContent() {
     {
       model: "CFG-SV-76",
       description: "Vertical streamline cryostat designed for optimal cooling performance and detector stability in laboratory environments.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/logos/ortec_ls.png",
+      image: "/images/ortec_ls.png",
       specs: [
         { parameter: "Type", specification: "Vertical Streamline" },
         { parameter: "Application", specification: "HPGe Cooling" },
@@ -34,7 +34,7 @@ export default function ProductsContent() {
     {
       model: "MOBIUS-ST-DET",
       description: "Liquid nitrogen recycler providing tried and tested cooling with refilling required only every two years under normal operation.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/m/mobius.png",
+      image: "/images/mobius.png",
       link: "https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/detector-cooling/mobius",
       specs: [
         { parameter: "Dewar Capacity", specification: "25 Liters" },
@@ -47,7 +47,7 @@ export default function ProductsContent() {
     {
       model: "DSPEC-50 MCA",
       description: "Advanced digital signal processing gamma spectrometer featuring high stability against variations in count rate and temperature.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/d/dsp50.png",
+      image: "/images/dsp50.png",
       link: "https://www.ortec-online.com/products/electronic-instruments/multi-channel-analyzers/workstation/dspec-50",
       specs: [
         { parameter: "Conversion Gain", specification: "Up to 64k channels" },
@@ -60,7 +60,7 @@ export default function ProductsContent() {
     {
       model: "A66-BW GammaVision",
       description: "Comprehensive gamma spectroscopy software suite for high and low resolution systems, featuring advanced spectrum analysis and automation.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/gammavision-collage.jpg",
+      image: "/images/gammavision-collage.jpg",
       link: "https://www.ortec-online.com/products/software/gammavision",
       specs: [
         { parameter: "OS Support", specification: "Windows 10, 8.1, 7" },
@@ -72,12 +72,12 @@ export default function ProductsContent() {
     {
       model: "Desktop Computer",
       description: "High-performance workstation pre-configured for gamma spectroscopy applications and ORTEC software integration.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/logos/ortec_ls.png"
+      image: "/images/ortec_ls.png"
     },
     {
       model: "Calibration Point Source Set",
       description: "Comprehensive set of radioactive sources for energy calibration and quality assurance protocols.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/logos/ortec_ls.png"
+      image: "/images/ortec_ls.png"
     }
   ];
 
@@ -85,7 +85,7 @@ export default function ProductsContent() {
     {
       model: "GEM-C30P4",
       description: "Extended range P-type HPGe detector in a Pop-Top configuration, offering maximum flexibility for detector exchanges.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/detector/detectors-types.png",
+      image: "/images/detectors-types.png",
       link: "https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/hpge-radiation-detector-types-how-choose/profile-gem-p-type-coaxial-and-semi-planar-hpge-radiation-detectors",
       specs: [
         { parameter: "Configuration", specification: "Pop-Top Capsule" },
@@ -97,7 +97,7 @@ export default function ProductsContent() {
     {
       model: "CFG-PV4",
       description: "Vertical Pop-Top cryostat designed for quick-exchange detector capsules and superior vacuum longevity.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/logos/ortec_ls.png",
+      image: "/images/ortec_ls.png",
       specs: [
         { parameter: "Type", specification: "Vertical Pop-Top" },
         { parameter: "Compatibility", specification: "Pop-Top Capsules" },
@@ -107,7 +107,7 @@ export default function ProductsContent() {
     {
       model: "CFG-ICS-P4",
       description: "Integrated Cooling System (ICS) for Pop-Top detectors, exploiting Stirling cooler technology for LN2-free operation.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/i/ics.png",
+      image: "/images/ics.png",
       link: "https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/detector-cooling/ics",
       specs: [
         { parameter: "Cooler Life", specification: ">200,000 hours" },
@@ -119,7 +119,7 @@ export default function ProductsContent() {
     {
       model: "DSPEC-50 MCA",
       description: "Advanced digital signal processing gamma spectrometer featuring high stability against variations in count rate and temperature.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/d/dsp50.png",
+      image: "/images/dsp50.png",
       link: "https://www.ortec-online.com/products/electronic-instruments/multi-channel-analyzers/workstation/dspec-50",
       specs: [
         { parameter: "Conversion Gain", specification: "Up to 64k channels" },
@@ -130,7 +130,7 @@ export default function ProductsContent() {
     {
       model: "A66-BW GammaVision",
       description: "Comprehensive gamma spectroscopy software suite for high and low resolution systems, featuring advanced spectrum analysis and automation.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/gammavision-collage.jpg",
+      image: "/images/gammavision-collage.jpg",
       link: "https://www.ortec-online.com/products/software/gammavision",
       specs: [
         { parameter: "OS Support", specification: "Windows 10, 8.1, 7" },
@@ -140,12 +140,12 @@ export default function ProductsContent() {
     {
       model: "Desktop Computer",
       description: "High-performance workstation pre-configured for gamma spectroscopy applications and ORTEC software integration.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/logos/ortec_ls.png"
+      image: "/images/ortec_ls.png"
     },
     {
       model: "Calibration Point Source Set",
       description: "Comprehensive set of radioactive sources for energy calibration and quality assurance protocols.",
-      image: "https://www.ortec-online.com/-/media/ametekortec/images/logos/ortec_ls.png"
+      image: "/images/ortec_ls.png"
     }
   ];
 
