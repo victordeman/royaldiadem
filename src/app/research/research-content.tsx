@@ -126,7 +126,7 @@ export default function ResearchContent() {
             <ProductCard
               model="GEM-C30 HPGe Detector"
               description="Extended range P-type coaxial High Purity Germanium radiation detector, optimized for high resolution and efficiency across a broad energy spectrum."
-              image="https://www.ortec-online.com/-/media/ametekortec/images/detector/detectors-types.png"
+              image="/images/detectors-types.png"
               link="https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/hpge-radiation-detector-types-how-choose/gem-p-type-coaxial-hpge-radiation-detectors"
               specs={[
                 { parameter: "Detector Type", specification: "Extended Range P-type Coaxial HPGe" },
@@ -140,7 +140,7 @@ export default function ResearchContent() {
             <ProductCard
               model="GammaVision Software (A66-BW)"
               description="Premier gamma spectroscopy analysis software designed for the identification and quantification of radionuclides in both high and low resolution systems."
-              image="https://www.ortec-online.com/-/media/ametekortec/images/gammavision-collage.jpg"
+              image="/images/gammavision-collage.jpg"
               link="https://www.ortec-online.com/products/software/gammavision"
               specs={[
                 { parameter: "Software Type", specification: "Gamma Spectroscopy Analysis Software" },
@@ -166,7 +166,7 @@ export default function ResearchContent() {
             <ProductCard
               model="MOBIUS-ST-DET"
               description="Liquid Nitrogen Recycler / Condensing Cooling System that enables HPGe detectors to operate with liquid nitrogen cooling but without the need for frequent refills."
-              image="https://www.ortec-online.com/-/media/ametekortec/images/m/mobius.png"
+              image="/images/mobius.png"
               link="https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/detector-cooling/mobius"
               specs={[
                 { parameter: "Type", specification: "LN₂ Recycler / Condensing Cooling System" },
