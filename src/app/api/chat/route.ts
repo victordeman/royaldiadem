@@ -2,6 +2,7 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { streamText } from "ai";
 import { generateEmbedding } from "@/lib/ai/embedding";
 import { searchSimilarDocuments } from "@/lib/ai/vector-store";
+import { NextResponse } from "next/server";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -12,18 +13,20 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
-      return new Response("Invalid messages provided", { status: 400 });
+      return NextResponse.json({ error: "Invalid messages provided" }, { status: 400 });
     }
 
     if (!process.env.HF_API_TOKEN) {
       console.error("Missing HF_API_TOKEN environment variable");
-      return new Response("Chat configuration error", { status: 500 });
+      return NextResponse.json({ error: "Chat configuration error: Missing API Token" }, { status: 500 });
     }
 
     if (!process.env.OPENAI_API_KEY) {
       console.error("Missing OPENAI_API_KEY environment variable");
-      return new Response("Embedding configuration error", { status: 500 });
+      return NextResponse.json({ error: "Embedding configuration error: Missing API Key" }, { status: 500 });
     }
+
+    console.log(`Processing chat request with ${messages.length} messages`);
 
     // 1. Get the last message to use for retrieval
     const lastMessage = messages[messages.length - 1];
@@ -31,23 +34,27 @@ export async function POST(req: Request) {
     // 2. Generate embedding for the query
     let embedding;
     try {
+      console.log("Generating embedding for query...");
       embedding = await generateEmbedding(lastMessage.content);
     } catch (error) {
       console.error("Error generating embedding:", error);
-      return new Response("Failed to process query", { status: 500 });
+      return NextResponse.json({ error: "Failed to process query (Embedding generation failed)" }, { status: 500 });
     }
 
     // 3. Search for relevant context in Supabase
     let contextText = "";
     try {
+      console.log("Searching for relevant context...");
       const context = await searchSimilarDocuments(embedding);
       contextText = context.map(doc => doc.content).join("\n\n---\n\n");
+      console.log(`Found ${context.length} relevant documents`);
     } catch (error) {
       console.error("Error searching similar documents:", error);
       // Continue without context if vector search fails, or handle as error
     }
 
     // 4. Create the stream using Qwen via Hugging Face OpenAI-compatible API
+    console.log("Creating AI stream...");
     const hf = createOpenAI({
       baseURL: "https://router.huggingface.co/v1",
       apiKey: process.env.HF_API_TOKEN,
@@ -66,9 +73,10 @@ export async function POST(req: Request) {
     ${contextText}`,
     });
 
+    console.log("Stream created successfully");
     return result.toDataStreamResponse();
   } catch (error) {
     console.error("Critical error in /api/chat:", error);
-    return new Response("Internal Server Error", { status: 500 });
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
