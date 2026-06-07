@@ -128,13 +128,15 @@ export default function ResearchContent() {
               description="Extended range P-type coaxial High Purity Germanium radiation detector, optimized for high resolution and efficiency across a broad energy spectrum."
               image="/images/detectors-types.png"
               link="https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/hpge-radiation-detector-types-how-choose/gem-p-type-coaxial-hpge-radiation-detectors"
-              specs={[
-                { parameter: "Detector Type", specification: "Extended Range P-type Coaxial HPGe" },
-                { parameter: "Relative Efficiency", specification: "~30%" },
-                { parameter: "Energy Resolution (FWHM)", specification: "≤ 1.80 keV @ 1.33 MeV" },
-                { parameter: "Energy Resolution", specification: "≤ 0.85 keV @ 122 keV" },
-                { parameter: "Peak-to-Compton Ratio", specification: "≥ 60:1" },
-                { parameter: "Energy Range", specification: "~40 keV – 10 MeV" }
+              parameters={[
+                { label: "Detector Type", value: "Extended Range P-type Coaxial HPGe" },
+                { label: "Relative Efficiency", value: "~30%" },
+                { label: "Energy Range", value: "~40 keV – 10 MeV" }
+              ]}
+              specifications={[
+                { label: "Resolution (FWHM)", value: "≤ 1.80 keV @ 1.33 MeV" },
+                { label: "Resolution (122 keV)", value: "≤ 0.85 keV" },
+                { label: "Peak-to-Compton", value: "≥ 60:1" }
               ]}
             />
             <ProductCard
@@ -142,12 +144,15 @@ export default function ResearchContent() {
               description="Premier gamma spectroscopy analysis software designed for the identification and quantification of radionuclides in both high and low resolution systems."
               image="/images/gammavision-collage.jpg"
               link="https://www.ortec-online.com/products/software/gammavision"
-              specs={[
-                { parameter: "Software Type", specification: "Gamma Spectroscopy Analysis Software" },
-                { parameter: "Compatibility", specification: "High & Low Resolution Systems" },
-                { parameter: "Operating System", specification: "Windows 10 / 11 (64-bit)" },
-                { parameter: "Key Features", specification: "Advanced peak search, nuclide ID, True Coincidence Summing Correction, QA/QC, Automation" },
-                { parameter: "Standards Compliance", specification: "ISO 11929, ANSI N42.42" }
+              parameters={[
+                { label: "Software Type", value: "Gamma Spectroscopy Analysis Software" },
+                { label: "Compatibility", value: "High & Low Resolution Systems" },
+                { label: "Operating System", value: "Windows 10 / 11 (64-bit)" }
+              ]}
+              specifications={[
+                { label: "Key Features", value: "Advanced peak search, nuclide ID, QA/QC" },
+                { label: "Correction", value: "True Coincidence Summing Correction" },
+                { label: "Standards", value: "ISO 11929, ANSI N42.42" }
               ]}
             />
           </div>
@@ -168,16 +173,15 @@ export default function ResearchContent() {
               description="Liquid Nitrogen Recycler / Condensing Cooling System that enables HPGe detectors to operate with liquid nitrogen cooling but without the need for frequent refills."
               image="/images/mobius.png"
               link="https://www.ortec-online.com/products/radiation-detectors/high-purity-germanium-hpge-radiation-detectors/detector-cooling/mobius"
-              specs={[
-                { parameter: "Type", specification: "LN₂ Recycler / Condensing Cooling System" },
-                { parameter: "Dewar Capacity", specification: "25–28 Liters (excluding detector dipstick)" },
-                { parameter: "Refill Frequency", specification: "Approximately once every 2 years (normal operation)" },
-                { parameter: "Cooler", specification: "AMETEK Sunpower cryocooler with vibration dampening" },
-                { parameter: "Power Consumption", specification: "125 W typical, 350 W maximum" },
-                { parameter: "Audible Noise", specification: "< 60 dB(A) at 1 meter" },
-                { parameter: "Electrical Supply", specification: "100–240 V AC, 50/60 Hz" },
-                { parameter: "Weight (empty)", specification: "~63 lb (28.6 kg)" },
-                { parameter: "Weight (full)", specification: "~113 lb (51.3 kg)" }
+              parameters={[
+                { label: "Type", value: "LN₂ Recycler / Condensing Cooling" },
+                { label: "Dewar Capacity", value: "25–28 Liters" },
+                { label: "Refill Frequency", value: "Approx. once every 2 years" }
+              ]}
+              specifications={[
+                { label: "Cooler", value: "AMETEK Sunpower with vibration dampening" },
+                { label: "Power", value: "125 W typical, 350 W maximum" },
+                { label: "Audible Noise", value: "< 60 dB(A) at 1 meter" }
               ]}
             />
           </div>
