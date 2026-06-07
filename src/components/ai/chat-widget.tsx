@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, isLoading, setMessages } = useChat({
     api: '/api/chat',
     initialMessages: [
       {
@@ -20,6 +20,17 @@ export function ChatWidget() {
         content: 'Hello! I am your Royal Diadem Technical Assistant. How can I help you today with information about our products or services?',
       } as Message,
     ],
+    onError: (error) => {
+      console.error('Chat error:', error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now().toString(),
+          role: 'assistant',
+          content: 'I apologize, but I encountered an error. Please try again later or contact our technical support if the issue persists.',
+        } as Message,
+      ]);
+    },
   });
 
   const scrollRef = useRef<HTMLDivElement>(null);
