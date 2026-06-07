@@ -106,12 +106,15 @@ export default function IndustriesContent() {
               description="Advanced Digital Multi-Channel Analyzer designed for high-performance gamma spectroscopy with exceptional throughput and stability."
               image="/images/dsp50.png"
               link="https://www.ortec-online.com/products/electronic-instruments/multi-channel-analyzers/workstation/dspec-50"
-              specs={[
-                { parameter: "Type", specification: "Digital Multi-Channel Analyzer" },
-                { parameter: "Maximum Throughput", specification: ">100,000 cps" },
-                { parameter: "Gain Stability", specification: "<50 ppm/°C" },
-                { parameter: "Communication", specification: "USB 2.0 and Ethernet" },
-                { parameter: "High Voltage Supply", specification: "Internal HV" }
+              parameters={[
+                { label: "Type", value: "Digital Multi-Channel Analyzer" },
+                { label: "Throughput", value: ">100,000 cps" },
+                { label: "Gain Stability", value: "<50 ppm/°C" }
+              ]}
+              specifications={[
+                { label: "Communication", value: "USB 2.0 and Ethernet" },
+                { label: "HV Supply", value: "Internal HV" },
+                { label: "Filter", value: "Digital Trapezoidal" }
               ]}
             />
           </div>
