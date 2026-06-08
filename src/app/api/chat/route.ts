@@ -18,12 +18,9 @@ export async function POST(req: Request) {
 
     if (!process.env.HF_API_TOKEN) {
       console.error("Missing HF_API_TOKEN environment variable");
-      return NextResponse.json({ error: "Chat configuration error: Missing API Token" }, { status: 500 });
-    }
-
-    if (!process.env.OPENAI_API_KEY) {
-      console.error("Missing OPENAI_API_KEY environment variable");
-      return NextResponse.json({ error: "Embedding configuration error: Missing API Key" }, { status: 500 });
+      return NextResponse.json({
+        error: "Embedding configuration error: Missing API Key (HF_API_TOKEN)"
+      }, { status: 500 });
     }
 
     console.log(`Processing chat request with ${messages.length} messages`);

@@ -64,23 +64,22 @@ See `.env.example` for the required environment variables. Key ones include:
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Your Supabase anonymous key.
 - `SUPABASE_SERVICE_ROLE_KEY`: Your Supabase service role key (for ingestion).
 - `DATABASE_URL`: Connection string for PostgreSQL (Supabase).
-- `OPENAI_API_KEY`: Your OpenAI API key for embeddings and chat.
-- `HUGGINGFACE_API_KEY`: (Optional) Your Hugging Face API key.
+- `HF_API_TOKEN`: Your Hugging Face API key for embeddings and chat.
 
 ## AI Assistant & RAG Pipeline
 The platform includes a built-in RAG (Retrieval-Augmented Generation) AI Assistant.
 
 ### How it works:
-1. **Data Ingestion:** Content from the website is converted into vector embeddings using OpenAI's `text-embedding-3-small` and stored in Supabase `pgvector`.
+1. **Data Ingestion:** Content from the website is converted into vector embeddings using Hugging Face's `nomic-ai/nomic-embed-text-v1.5` and stored in Supabase `pgvector`.
 2. **Retrieval:** When a user asks a question, the assistant searches the vector database for relevant context.
-3. **Generation:** The retrieved context is passed to an LLM (default: `gpt-4o-mini`) via the Vercel AI SDK to generate a technically accurate response.
+3. **Generation:** The retrieved context is passed to an LLM (default: `Qwen/Qwen2.5-72B-Instruct`) via the Vercel AI SDK to generate a technically accurate response.
 
 ### Ingesting Data:
 To populate the vector database with company content, run:
 ```bash
 npx tsx src/scripts/ingest.ts
 ```
-*(Ensure `SUPABASE_SERVICE_ROLE_KEY` and `OPENAI_API_KEY` are set in your environment).*
+*(Ensure `SUPABASE_SERVICE_ROLE_KEY` and `HF_API_TOKEN` are set in your environment).*
 
 ## Deployment
 This project is configured for easy deployment on Vercel. Simply connect your GitHub repository to Vercel, and it will automatically handle the build and deployment process.
